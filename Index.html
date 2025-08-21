@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Demo User</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+
+        .selection-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .subtitle {
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .user-dropdown {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 16px;
+            background: white;
+            color: #2d3748;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .user-dropdown:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .user-option {
+            padding: 10px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .user-info {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 4px solid #667eea;
+            display: none;
+        }
+
+        .user-info.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .user-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .user-id {
+            font-family: monospace;
+            color: #667eea;
+            background: #edf2f7;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .user-scenario {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        .user-data {
+            font-size: 0.9em;
+            color: #718096;
+        }
+
+        .start-demo-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .start-demo-btn.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .start-demo-btn.active:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .badge-wallet { background: #fed7d7; color: #c53030; }
+        .badge-sip { background: #c6f6d5; color: #2f855a; }
+        .badge-refund { background: #feebc8; color: #c05621; }
+        .badge-general { background: #bee3f8; color: #2b6cb0; }
+    </style>
+</head>
+<body>
+    <div class="selection-container">
+        <div class="logo">💬 FinTech AI Assistant</div>
+        <h1 class="title">Try Our Demo</h1>
+        <p class="subtitle">Select a demo user to see how our AI handles different customer scenarios</p>
+        
+        <select class="user-dropdown" id="userSelect" onchange="showUserInfo()">
+            <option value="">Choose a demo user...</option>
+            <option value="phonepe_123456789">👤 Rajesh Kumar - Wallet Issues</option>
+            <option value="phonepe_111222333">👤 Sneha Reddy - SIP Mandate Problems</option>
+            <option value="phonepe_987654321">👤 Priya Sharma - Refund Delays</option>
+            <option value="phonepe_444555666">👤 Amit Patel - General Queries</option>
+            <option value="phonepe_777888999">👤 Kavya Singh - Investment Questions</option>
+        </select>
+
+        <!-- User Info Cards -->
+        <div id="user_phonepe_123456789" class="user-info">
+            <div class="user-name">👤 Rajesh Kumar</div>
+            <div class="user-id">phonepe_123456789</div>
+            <div class="user-scenario">💰 <strong>Scenario:</strong> Money deducted from bank but not added to wallet</div>
+            <div class="user-data">
+                📊 <strong>Profile:</strong> Has ₹5,000 pending transaction, wallet balance ₹2,500<br>
+                📱 <strong>Location:</strong> Mumbai, Maharashtra<br>
+                🏦 <strong>Bank:</strong> HDFC Bank linked
+            </div>
+            <span class="badge badge-wallet">Wallet Issues</span>
+        </div>
+
+        <div id="user_phonepe_111222333" class="user-info">
+            <div class="user-name">👤 Sneha Reddy</div>
+            <div class="user-id">phonepe_111222333</div>
+            <div class="user-scenario">📈 <strong>Scenario:</strong> SIP mandate failures despite sufficient balance</div>
+            <div class="user-data">
+                📊 <strong>Profile:</strong> Monthly SIP ₹10,000, bank balance ₹50,000<br>
+                📱 <strong>Location:</strong> Hyderabad, Telangana<br>
+                🏦 <strong>Bank:</strong> SBI linked, 3 failed SIP attempts
+            </div>
+            <span class="badge badge-sip">SIP Issues</span>
+        </div>
+
+        <div id="user_phonepe_987654321" class="user-info">
+            <div class="user-name">👤 Priya Sharma</div>
+            <div class="user-id">phonepe_987654321</div>
+            <div class="user-scenario">🔄 <strong>Scenario:</strong> Refund processing delays and status tracking</div>
+            <div class="user-data">
+                📊 <strong>Profile:</strong> ₹8,000 refund pending for 12 days<br>
+                📱 <strong>Location:</strong> Delhi, NCR<br>
+                🏦 <strong>Bank:</strong> ICICI Bank, multiple refund requests
+            </div>
+            <span class="badge badge-refund">Refund Issues</span>
+        </div>
+
+        <div id="user_phonepe_444555666" class="user-info">
+            <div class="user-name">👤 Amit Patel</div>
+            <div class="user-id">phonepe_444555666</div>
+            <div class="user-scenario">❓ <strong>Scenario:</strong> General queries about features and policies</div>
+            <div class="user-data">
+                📊 <strong>Profile:</strong> Regular user, wallet balance ₹15,000<br>
+                📱 <strong>Location:</strong> Ahmedabad, Gujarat<br>
+                🏦 <strong>Bank:</strong> Axis Bank, completed KYC
+            </div>
+            <span class="badge badge-general">General Help</span>
+        </div>
+
+        <div id="user_phonepe_777888999" class="user-info">
+            <div class="user-name">👤 Kavya Singh</div>
+            <div class="user-id">phonepe_777888999</div>
+            <div class="user-scenario">📊 <strong>Scenario:</strong> Investment portfolio and mutual fund queries</div>
+            <div class="user-data">
+                📊 <strong>Profile:</strong> Active investor, portfolio value ₹2,50,000<br>
+                📱 <strong>Location:</strong> Bangalore, Karnataka<br>
+                🏦 <strong>Bank:</strong> Kotak Bank, multiple SIPs running
+            </div>
+            <span class="badge badge-sip">Investment Help</span>
+        </div>
+
+        <button class="start-demo-btn" id="startDemoBtn" onclick="startDemo()">
+            Start Demo Chat 🚀
+        </button>
+    </div>
+
+    <script>
+        let selectedUser = null;
+
+        function showUserInfo() {
+            const select = document.getElementById('userSelect');
+            const selectedValue = select.value;
+            const startBtn = document.getElementById('startDemoBtn');
+            
+            // Hide all user info cards
+            const userInfos = document.querySelectorAll('.user-info');
+            userInfos.forEach(info => info.classList.remove('active'));
+            
+            if (selectedValue) {
+                // Show selected user info
+                const userInfo = document.getElementById(`user_${selectedValue}`);
+                if (userInfo) {
+                    userInfo.classList.add('active');
+                }
+                
+                // Enable start button
+                startBtn.classList.add('active');
+                
+                // Store selected user data
+                selectedUser = {
+                    user_id: selectedValue,
+                    name: select.options[select.selectedIndex].text.split(' - ')[0].replace('👤 ', ''),
+                    scenario: select.options[select.selectedIndex].text.split(' - ')[1]
+                };
+            } else {
+                // Disable start button
+                startBtn.classList.remove('active');
+                selectedUser = null;
+            }
+        }
+
+        function startDemo() {
+            if (!selectedUser) {
+                alert('Please select a demo user first!');
+                return;
+            }
+            
+            // Store selected user in localStorage for chat widget
+            localStorage.setItem('demoUser', JSON.stringify(selectedUser));
+            
+            // Show loading message
+            const startBtn = document.getElementById('startDemoBtn');
+            startBtn.innerHTML = 'Starting Demo... 🚀';
+            startBtn.style.opacity = '0.7';
+            
+            // Small delay for better UX, then redirect
+            setTimeout(() => {
+                // Navigate to company demo page
+                window.location.href = 'company.html';
+            }, 500);
+        }
+
+        // Auto-focus the dropdown on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('userSelect').focus();
+        });
+    </script>
+</body>
+</html>
