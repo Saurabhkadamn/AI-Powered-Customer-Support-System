@@ -3,8 +3,39 @@
 > **Next-generation customer support system powered by LangGraph AI agents and real-time data integration**
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Click_Here-blue?style=for-the-badge)](https://saurabhkadamn.github.io/AI-Powered-Customer-Support-System/)
-[![AI Agent](https://img.shields.io/badge/🧠_AI_Agent-LangGraph-green?style=for-the-badge)](https://langchain-ai.github.io/langgraph/)
+[![AI Agent](https://img.shields.io/badge/🤗_AI_Agent-Hugging_Face-yellow?style=for-the-badge)](https://huggingface.co/spaces/saurabh318/ai-chat)
+[![Mock APIs](https://img.shields.io/badge/🏦_Mock_APIs-Hugging_Face-blue?style=for-the-badge)](https://huggingface.co/spaces/saurabh318/mock-apis)
+[![Knowledge Base](https://img.shields.io/badge/📚_Knowledge_Base-Hugging_Face-green?style=for-the-badge)](https://huggingface.co/spaces/saurabh318/KB)
+[![LangGraph](https://img.shields.io/badge/🧠_LangGraph-Workflow-purple?style=for-the-badge)](https://langchain-ai.github.io/langgraph/)
 [![Chat Widget](https://img.shields.io/badge/💬_Chat_Widget-Embeddable-orange?style=for-the-badge)](#)
+
+## 🌐 **Backend Services (Powered by Hugging Face Spaces)**
+
+This demo is powered by **three separate backend services** deployed on Hugging Face Spaces, demonstrating a complete microservices architecture:
+
+### **🤖 AI Chat Agent**
+[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-AI_Chat_Agent-yellow)](https://huggingface.co/spaces/saurabh318/ai-chat)
+
+**LangGraph-powered intelligent agent** that orchestrates workflows and generates responses
+- **Service**: `https://saurabh318-ai-chat.hf.space`
+- **Technology**: LangGraph + NVIDIA AI Endpoints
+- **Function**: Query analysis, workflow planning, response generation
+
+### **🏦 Mock Fintech APIs**
+[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-Mock_APIs-blue)](https://huggingface.co/spaces/saurabh318/mock-apis)
+
+**Realistic fintech backend simulation** with comprehensive customer data
+- **Service**: `https://saurabh318-mock-apis.hf.space`
+- **Technology**: FastAPI + JSON mock data
+- **Function**: Wallet, bank, mandates, refunds, reconciliation APIs
+
+### **📚 Knowledge Base System**
+[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-Knowledge_Base-green)](https://huggingface.co/spaces/saurabh318/KB)
+
+**RAG-powered document search** with semantic understanding
+- **Service**: `https://saurabh318-kb.hf.space`
+- **Technology**: Pinecone + Sentence Transformers
+- **Function**: Company policy search, document processing
 
 ## 🎯 **What This Demonstrates**
 
@@ -31,8 +62,6 @@ This is a **production-ready demo** of an AI customer support system that shows 
 - *"My SIP of ₹10000 failed despite sufficient balance"*
 - *"How long does refund processing take?"*
 - *"What is your wallet balance limit policy?"*
-
-
 
 ## 🏗️ **System Architecture**
 
@@ -161,10 +190,10 @@ The demo includes **5 realistic customer personas** with different scenarios:
 ### **View Demo Locally**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ai-customer-support-demo.git
+git clone https://github.com/Saurabhkadamn/AI-Powered-Customer-Support-System.git
 
 # Navigate to directory
-cd ai-customer-support-demo
+cd AI-Powered-Customer-Support-System
 
 # Open in browser
 open index.html
@@ -186,14 +215,31 @@ python -m http.server 8000
 
 ## 🔗 **API Integration**
 
-The demo connects to live APIs that power the AI responses:
+The demo connects to these live APIs that power the AI responses:
 
 ### **AI Agent API**
 ```javascript
-POST https://ai-agent-api.hf.space/chat
+POST https://saurabh318-ai-chat.hf.space/chat
 {
   "user_id": "phonepe_123456789",
   "query": "Money not added to wallet"
+}
+```
+
+### **Mock Fintech APIs**
+```javascript
+GET https://saurabh318-mock-apis.hf.space/api/wallet/phonepe_123456789
+GET https://saurabh318-mock-apis.hf.space/api/bank/phonepe_123456789/transactions
+GET https://saurabh318-mock-apis.hf.space/api/reconcile/wallet_vs_bank/phonepe_123456789
+```
+
+### **Knowledge Base API**
+```javascript
+POST https://saurabh318-kb.hf.space/search
+{
+  "query": "refund policy",
+  "top_k": 3,
+  "search_type": "semantic"
 }
 ```
 
@@ -203,7 +249,7 @@ POST https://ai-agent-api.hf.space/chat
   "success": true,
   "response": "Personalized AI response...",
   "processing_time": 12.34,
-  "workflow_used": ["wallet_data", "bank_data", "reconcile_data"],
+  "workflow_used": ["wallet_data", "bank_data", "reconcile_data", "knowledge_data"],
   "timestamp": "2025-01-20T10:30:00Z"
 }
 ```
@@ -328,10 +374,10 @@ This demo represents the **future of customer support**:
 
 Built by **Saurabh Kadam** - AI Engineer passionate about customer experience
 
-- 💼 **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- 📧 **Email**: your.email@domain.com
-- 🐙 **GitHub**: [@yourusername]([https://github.com/Saurabhkadamn]
-- 💬 **Demo Feedback**: [Open an Issue](https://saurabhkadamn.github.io/AI-Powered-Customer-Support-System/)
+- 💼 **LinkedIn**: [Saurabh Kadam](https://www.linkedin.com/in/saurabh-kadam-318sa/)
+- 📧 **Email**: saurabh.kadam.5051@gmail.com
+- 🐙 **GitHub**: [@Saurabhkadamn](https://github.com/Saurabhkadamn)
+- 💬 **Demo Feedback**: [Open an Issue](https://github.com/Saurabhkadamn/AI-Powered-Customer-Support-System/issues)
 
 ---
 
@@ -352,10 +398,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repository if you found it helpful!**
 
-[🌐 Try Live Demo]((https://saurabhkadamn.github.io/AI-Powered-Customer-Support-System/)) • [📚 Documentation](https://github.com/yourusername/ai-customer-support-demo/wiki) • [🐛 Report Bug](https://github.com/yourusername/ai-customer-support-demo/issues)
-
+[🌐 Try Live Demo](https://saurabhkadamn.github.io/AI-Powered-Customer-Support-System/) • [📚 Documentation](https://github.com/Saurabhkadamn/AI-Powered-Customer-Support-System/wiki) • [🐛 Report Bug](https://github.com/Saurabhkadamn/AI-Powered-Customer-Support-System/issues)
 
 </div>
-
-
-
