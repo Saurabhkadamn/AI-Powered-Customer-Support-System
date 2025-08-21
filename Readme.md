@@ -18,7 +18,7 @@ This is a **production-ready demo** of an AI customer support system that shows 
 
 ## 🚀 **Live Demo**
 
-**Try it yourself:** [AI Customer Support Demo](https://yourusername.github.io/ai-customer-support-demo/)
+**Try it yourself:** [AI Customer Support Demo](https://saurabhkadamn.github.io/AI-Powered-Customer-Support-System/)
 
 ### Demo Flow:
 1. **Select a demo customer** (each has different scenarios)
@@ -328,8 +328,8 @@ Built by **Saurabh Kadam** - AI Engineer passionate about customer experience
 
 - 💼 **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
 - 📧 **Email**: your.email@domain.com
-- 🐙 **GitHub**: [@yourusername](https://github.com/yourusername)
-- 💬 **Demo Feedback**: [Open an Issue](https://github.com/yourusername/ai-customer-support-demo/issues)
+- 🐙 **GitHub**: [@yourusername]([https://github.com/Saurabhkadamn]
+- 💬 **Demo Feedback**: [Open an Issue](https://saurabhkadamn.github.io/AI-Powered-Customer-Support-System/)
 
 ---
 
@@ -354,3 +354,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 </div>
+
