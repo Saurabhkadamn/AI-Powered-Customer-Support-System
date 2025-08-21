@@ -2,7 +2,7 @@
 
 > **Next-generation customer support system powered by LangGraph AI agents and real-time data integration**
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Click_Here-blue?style=for-the-badge)](https://yourusername.github.io/ai-customer-support-demo/)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Click_Here-blue?style=for-the-badge)](https://saurabhkadamn.github.io/AI-Powered-Customer-Support-System/)
 [![AI Agent](https://img.shields.io/badge/🧠_AI_Agent-LangGraph-green?style=for-the-badge)](https://langchain-ai.github.io/langgraph/)
 [![Chat Widget](https://img.shields.io/badge/💬_Chat_Widget-Embeddable-orange?style=for-the-badge)](#)
 
@@ -351,5 +351,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **⭐ Star this repository if you found it helpful!**
 
 [🌐 Try Live Demo](https://yourusername.github.io/ai-customer-support-demo/) • [📚 Documentation](https://github.com/yourusername/ai-customer-support-demo/wiki) • [🐛 Report Bug](https://github.com/yourusername/ai-customer-support-demo/issues)
+
 
 </div>
