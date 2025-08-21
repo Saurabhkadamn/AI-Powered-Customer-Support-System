@@ -350,8 +350,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repository if you found it helpful!**
 
-[🌐 Try Live Demo](https://yourusername.github.io/ai-customer-support-demo/) • [📚 Documentation](https://github.com/yourusername/ai-customer-support-demo/wiki) • [🐛 Report Bug](https://github.com/yourusername/ai-customer-support-demo/issues)
+[🌐 Try Live Demo]((https://saurabhkadamn.github.io/AI-Powered-Customer-Support-System/)) • [📚 Documentation](https://github.com/yourusername/ai-customer-support-demo/wiki) • [🐛 Report Bug](https://github.com/yourusername/ai-customer-support-demo/issues)
 
 
 </div>
+
 
